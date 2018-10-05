@@ -1,0 +1,23 @@
+
+https://github.com/golang/go/wiki/Ubuntu
+
+$ sudo apt-get install golang-go
+
+If that's too old for you, try:
+
+$ sudo add-apt-repository ppa:gophers/archive
+$ sudo apt-get update
+$ sudo apt-get install golang-1.10-go
+
+sudo add-apt-repository ppa:gophers/archive
+ Co-installable packages of Go 1.4, 1.5, 1.6, 1.7, 1.8, and tip for Ubuntu Trusty, Wily, Xenial and Yakkety.
+
+Installing golang-1.X installs the latest point release of Go 1.X. I add the odd patch to keep older versions of Go building with new toolchains, but I do *not* make any effort to backport security fixes to Go releases that are not supported by upstream. Buyer beware!
+
+The golang-tip package is a bit different, it will always track Go tip (it is updated manually and somewhat erratically currently). I start uploading a release when its first beta is released, so e.g. I uploaded a golang-1.7  package after 1.7 beta 1 was released.
+
+So these packages can be co-installable, they do not install anything to /usr/bin. Once you have installed the golang-1.X package, you will need to add /usr/lib/go-1.X/bin (or maybe /usr/lib/go-tip/bin) to your $PATH, or you can just invoke /usr/lib/go-1.X/bin/go directly.
+
+The packages all Recommend: appropriate versions of the runtime race detector support on amd64, which are also built in this PPA.
+ More info: https://launchpad.net/~gophers/+archive/ubuntu/archive
+Press [ENTER] to continue or ctrl-c to cancel adding it
